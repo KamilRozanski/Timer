@@ -1,4 +1,4 @@
-const nowTime = new Date().getTime();
+const nowTime = new Date("2019-10-03 22:53:00").getTime();
 const endTime = new Date("2019-10-11 0:00:00").getTime();
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
