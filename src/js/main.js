@@ -18,14 +18,16 @@ if ('serviceWorker' in navigator) {
 
 
 const nowTime = new Date("2019/10/03 22:53:00").getTime();
-const endTime = new Date("2019/10/11 0:00:00").getTime();
+let endTime = new Date("2019/10/11 00:00:00").getTime();
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
 const spanMinutes = document.querySelector('span.m');
 const spanSeconds = document.querySelector('span.s');
+const mainParagraph = document.querySelector('.main__paragraph');
 
 
 setInterval(()=>{
+  
     const nowTime = new Date().getTime(); //get a current time
     
     
@@ -48,6 +50,13 @@ setInterval(()=>{
     spanHours.innerHTML = hours;
     spanMinutes.innerHTML = minutes;
     spanSeconds.innerHTML = seconds;
+    console.log (endTime)
+    
+    if (endTime < nowTime) {
+      endTime = new Date("2020/10/11 00:00:00").getTime();
+      mainParagraph.innerHTML = "Alan's first birthday will be";
+      console.log ("dupa")
+    }
 
 }, 1000)
 
