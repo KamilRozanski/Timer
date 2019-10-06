@@ -14,3 +14,53 @@ body {
   color: $yellow;
   background: $violet;
 }
+<style>
+        html {
+            font-size: 16px;
+        }
+        @media (max-width: 411px) {
+            html{
+                font-size: 10px;
+            }
+        }
+
+        body {
+            background-color: rgb(75, 148, 187);
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .main {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8px;
+            margin: 20px 0;
+        }
+
+        .main__paragraph {
+            font-size: 35px;
+        }
+        
+
+        .d,
+        .h,
+        .m,
+        .s {
+            font-size: 40px;
+        }
+
+        .main__baby {
+            width: 250px;
+            height: 500px;
+        }
+
+        @media (max-width: 411px) {
+            .main__baby {
+                width: 120px;
+                height: 250px;
+            }
+        }
