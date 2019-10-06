@@ -4,6 +4,12 @@
 
 html {
   box-sizing: border-box;
+  font-size: 16px;
+  @media (max-width: 411px) {
+    html{
+        font-size: 10px;
+    }
+}
 }
 
 *, *:before, *:after {
@@ -11,24 +17,16 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  background-color: rgb(75, 148, 187);
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
 }
-<style>
-        html {
-            font-size: 16px;
-        }
-        @media (max-width: 411px) {
-            html{
-                font-size: 10px;
-            }
-        }
 
-        body {
-            background-color: rgb(75, 148, 187);
-            color: #fff;
-            font-family: 'Courier New', Courier, monospace;
-        }
+        
+        
+        
+
+      
 
         .main {
             height: 100vh;
