@@ -315,7 +315,9 @@ html {
     html html {
       font-size: 10px; } }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
