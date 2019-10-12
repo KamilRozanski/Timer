@@ -64,7 +64,7 @@ setInterval(() => {
   let seconds = Math.floor((nowTime / 1000 - endTime / 1000)) % 60;
   seconds = seconds < 10 && seconds >= 0 ? `0${seconds}` : seconds; // add "0" if seconds < 10.
 
-  spanDays.innerHTML = `I'm late: ${days}`;
+  spanDays.innerHTML = `I'm late<br> ${days}`;
   spanHours.innerHTML = hours;
   spanMinutes.innerHTML = minutes;
   spanSeconds.innerHTML = seconds;
