@@ -311,9 +311,10 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 16px; }
-  @media (max-width: 411px) {
-    html html {
-      font-size: 10px; } }
+
+@media (min-width: 320px) and (max-width: 1023px) {
+  html {
+    font-size: 10px; } }
 
 *,
 *:before,
@@ -346,21 +347,21 @@ body {
   margin: 20px 0; }
 
 .main__paragraph {
-  font-size: 35px; }
+  font-size: 2.51rem; }
 
 .d,
 .h,
 .m,
 .s {
-  font-size: 40px; }
+  font-size: 2.5rem; }
 
 .main__baby {
   width: 250px;
   height: 500px; }
 
-@media (max-width: 411px) {
+@media (min-width: 320px) and (max-width: 1023px) {
   .main__baby {
-    width: 120px;
-    height: 250px; } }
+    width: 100px;
+    height: 200px; } }
 
 /*# sourceMappingURL=main.css.map */
