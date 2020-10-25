@@ -18,7 +18,7 @@ if ('serviceWorker' in navigator) {
 
 
 let nowTime = new Date("2019/10/11 00:00:01").getTime();
-let endTime = new Date("2020/10/18 00:00:00").getTime();
+let endTime = new Date("2021/10/18 00:00:00").getTime();
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
 const spanMinutes = document.querySelector('span.m');
@@ -37,7 +37,7 @@ setInterval(() => {
 
 
   let hours = Math.floor((endTime / (1000 * 60 * 60) - nowTime / (1000 * 60 * 60))) % 24;
-  hours = hours < 10 && hours >= 0 ?  `0${hours}` : hours; // add "0" if hours < 10.
+  hours = hours < 10 && hours >= 0 ? `0${hours}` : hours; // add "0" if hours < 10.
 
   let minutes = Math.floor((endTime / (1000 * 60) - nowTime / (1000 * 60))) % 60;
   minutes = minutes < 10 && minutes >= 0 ? `0${minutes}` : minutes; // add "0" if minutes < 10.
@@ -53,21 +53,21 @@ setInterval(() => {
 
   if (endTime < nowTime) {
     let days = Math.floor((nowTime / (1000 * 60 * 60 * 24)) - (endTime / (1000 * 60 * 60 * 24)));
-  // 1000s (micro sec), 60m (minuts), 60s (seconds) 24h (hours) = days
-  days = days < 10 && days >= 0 ? `0${days}` : days;
+    // 1000s (micro sec), 60m (minuts), 60s (seconds) 24h (hours) = days
+    days = days < 10 && days >= 0 ? `0${days}` : days;
 
-  let hours = Math.floor((nowTime / (1000 * 60 * 60) - endTime / (1000 * 60 * 60))) % 24;
-  hours = hours < 10 && hours >= 0 ?  `0${hours}` : hours; // add "0" if hours < 10.
+    let hours = Math.floor((nowTime / (1000 * 60 * 60) - endTime / (1000 * 60 * 60))) % 24;
+    hours = hours < 10 && hours >= 0 ? `0${hours}` : hours; // add "0" if hours < 10.
 
-  let minutes = Math.floor((nowTime / (1000 * 60) - endTime / (1000 * 60))) % 60;
-  minutes = minutes < 10 && minutes >= 0 ? `0${minutes}` : minutes; // add "0" if minutes < 10.
-  let seconds = Math.floor((nowTime / 1000 - endTime / 1000)) % 60;
-  seconds = seconds < 10 && seconds >= 0 ? `0${seconds}` : seconds; // add "0" if seconds < 10.
+    let minutes = Math.floor((nowTime / (1000 * 60) - endTime / (1000 * 60))) % 60;
+    minutes = minutes < 10 && minutes >= 0 ? `0${minutes}` : minutes; // add "0" if minutes < 10.
+    let seconds = Math.floor((nowTime / 1000 - endTime / 1000)) % 60;
+    seconds = seconds < 10 && seconds >= 0 ? `0${seconds}` : seconds; // add "0" if seconds < 10.
 
-  spanDays.innerHTML = `I'm late<br> ${days}`;
-  spanHours.innerHTML = hours;
-  spanMinutes.innerHTML = minutes;
-  spanSeconds.innerHTML = seconds;
+    spanDays.innerHTML = `I'm late<br> ${days}`;
+    spanHours.innerHTML = hours;
+    spanMinutes.innerHTML = minutes;
+    spanSeconds.innerHTML = seconds;
 
     mainParagraph.innerHTML = `Ups I'm a bit late, but don't worry soon you will see me 😍`;
 
