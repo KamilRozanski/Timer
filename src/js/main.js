@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 
-let nowTime = new Date("2019/10/11 00:00:01").getTime();
+let nowTime = new Date("2020/10/25 00:00:01").getTime();
 let endTime = new Date("2021/10/18 00:00:00").getTime();
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
@@ -69,10 +69,10 @@ setInterval(() => {
     spanMinutes.innerHTML = minutes;
     spanSeconds.innerHTML = seconds;
 
-    mainParagraph.innerHTML = `Ups I'm a bit late, but don't worry soon you will see me 😍`;
+    mainParagraph.innerHTML = `Upss I'm a bit late, but don't worry soon you will see me 😍`;
 
   } else {
-    mainParagraph.innerHTML = "Alan's first birthday will be 😍";
+    mainParagraph.innerHTML = "Alan's birthday will be 😍";
   }
 
 
