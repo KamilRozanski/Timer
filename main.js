@@ -24,11 +24,15 @@ const spanHours = document.querySelector('span.h');
 const spanMinutes = document.querySelector('span.m');
 const spanSeconds = document.querySelector('span.s');
 const mainParagraph = document.querySelector('.main__paragraph');
+let alanBirthaday = 0
 
 
 setInterval(() => {
 
     let nowTime = new Date().getTime(); //get a current time
+    var today = new Date();
+    var yr = today.getFullYear();
+    alanBirthaday = (yr - 2019)
 
 
     let days = Math.floor((endTime / (1000 * 60 * 60 * 24)) - (nowTime / (1000 * 60 * 60 * 24)));
@@ -72,39 +76,8 @@ setInterval(() => {
         mainParagraph.innerHTML = `Upss I'm a bit late, but don't worry soon you will see me 😍`;
 
     } else {
-        mainParagraph.innerHTML = "Alan's birthday will be 😍";
+        mainParagraph.innerHTML = `Alan's ${alanBirthaday}nd  birthday will be 😍`;
     }
 
 
 }, 1000)
-
-
-
-
-// // Set the date we're counting down to
-// var countDownDate = new Date("2019-10-11 0:00:00").getTime();
-
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-//   // Display the result in the element with id="demo"
-//   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-//   + minutes + "m " + seconds + "s ";
-
-//   // If the count down is finished, write some text 
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("demo").innerHTML = "EXPIRED";
-//   }
-// }, 1000);
