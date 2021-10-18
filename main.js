@@ -30,10 +30,10 @@ let alanBirthaday = 0
 setInterval(() => {
 
     let nowTime = new Date().getTime(); //get a current time
-    var today = new Date();
-    var yr = today.getFullYear();
+    let today = new Date();
+    let yr = today.getFullYear();
     alanBirthaday = (yr - 2019)
-
+    console.log(yr)
 
     let days = Math.floor((endTime / (1000 * 60 * 60 * 24)) - (nowTime / (1000 * 60 * 60 * 24)));
     // 1000s (micro sec), 60m (minuts), 60s (seconds) 24h (hours) = days
