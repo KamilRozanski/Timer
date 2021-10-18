@@ -78,7 +78,7 @@ setInterval(() => {
 
     } else {
         alanBirthaday += 1
-        mainParagraph.innerHTML = `Alan's ${alanBirthaday}nd  birthday will be 😍`;
+        mainParagraph.innerHTML = `Alan's ${alanBirthaday}rd  birthday will be 😍`;
     }
 
 
