@@ -14,11 +14,11 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// place your code below
+
 
 
 let nowTime = new Date("2020/10/25 00:00:01").getTime();
-let endTime = new Date("2021/10/18 00:00:00").getTime();
+let endTime = new Date("2022/10/18 00:00:00").getTime();
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
 const spanMinutes = document.querySelector('span.m');
@@ -74,9 +74,10 @@ setInterval(() => {
         spanSeconds.innerHTML = seconds;
 
         mainParagraph.innerHTML = `Upss I'm a bit late, but don't worry soon you will see me 😍`;
-
+        
     } else {
         mainParagraph.innerHTML = `Alan's ${alanBirthaday}nd  birthday will be 😍`;
+        
     }
 
 
