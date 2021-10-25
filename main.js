@@ -16,9 +16,9 @@ if ('serviceWorker' in navigator) {
 
 
 
+let currentYear = new Date().getFullYear() + 1
 
-let nowTime = new Date("2020/10/25 00:00:01").getTime();
-let endTime = new Date("2022/10/18 00:00:00").getTime();
+let endTime = new Date(`${currentYear}/10/18 00:00:00`).getTime();
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
 const spanMinutes = document.querySelector('span.m');
@@ -27,15 +27,23 @@ const mainParagraph = document.querySelector('.main__paragraph');
 let alanBirthaday = 0
 
 
+
+
+
 setInterval(() => {
 
     let nowTime = new Date().getTime(); //get a current time
     let today = new Date();
     let yr = today.getFullYear();
     alanBirthaday = (yr - 2019)
-    console.log(yr)
+
+
+
+
+
 
     let days = Math.floor((endTime / (1000 * 60 * 60 * 24)) - (nowTime / (1000 * 60 * 60 * 24)));
+
     // 1000s (micro sec), 60m (minuts), 60s (seconds) 24h (hours) = days
     days = days < 10 && days >= 0 ? `0${days}` : days;
 
@@ -49,13 +57,19 @@ setInterval(() => {
     let seconds = Math.floor((endTime / 1000 - nowTime / 1000)) % 60;
     seconds = seconds < 10 && seconds >= 0 ? `0${seconds}` : seconds; // add "0" if seconds < 10.
 
-
     spanDays.innerHTML = days;
     spanHours.innerHTML = hours;
     spanMinutes.innerHTML = minutes;
     spanSeconds.innerHTML = seconds;
 
+
+
+    // console.log(endTime < nowTime)
     if (endTime < nowTime) {
+
+
+
+
         // let days = Math.floor((nowTime / (1000 * 60 * 60 * 24)) - (endTime / (1000 * 60 * 60 * 24)));
         // // 1000s (micro sec), 60m (minuts), 60s (seconds) 24h (hours) = days
         // days = days < 10 && days >= 0 ? `0${days}` : days;
@@ -77,6 +91,7 @@ setInterval(() => {
 
 
     } else {
+
         alanBirthaday += 1
         mainParagraph.innerHTML = `Alan's ${alanBirthaday}rd  birthday will be 😍`;
     }
