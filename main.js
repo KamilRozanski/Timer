@@ -16,7 +16,8 @@ if ('serviceWorker' in navigator) {
 
 
 
-let currentYear = new Date().getFullYear() + 1
+let currentYear = new Date().getFullYear()
+
 
 let endTime = new Date(`${currentYear}/10/18 00:00:00`).getTime();
 const spanDays = document.querySelector('span.d');
@@ -33,11 +34,6 @@ let alanBirthaday = 0
 setInterval(() => {
 
     let nowTime = new Date().getTime(); //get a current time
-
-
-
-
-
 
 
     let days = Math.floor((endTime / (1000 * 60 * 60 * 24)) - (nowTime / (1000 * 60 * 60 * 24)));
@@ -61,7 +57,8 @@ setInterval(() => {
     spanSeconds.innerHTML = seconds;
 
     alanBirthaday = (currentYear - 2019)
-    if (alanBirthaday == 3) {
+    console.log(alanBirthaday, currentYear)
+    if (alanBirthaday === 3) {
         mainParagraph.innerHTML = `Alan's ${alanBirthaday}rd  birthday will be 😍`;
     } else {
         mainParagraph.innerHTML = `Alan's ${alanBirthaday}th  birthday will be 😍`;
