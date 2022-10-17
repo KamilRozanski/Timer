@@ -18,7 +18,7 @@ if ('serviceWorker' in navigator) {
 
 
 let nowTime = new Date("2020/10/25 00:00:01").getTime();
-let endTime = new Date("2021/10/18 00:00:00").getTime();
+let endTime = new Date("2021/10/18 08:45:00").getTime();
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
 const spanMinutes = document.querySelector('span.m');
