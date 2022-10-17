@@ -19,7 +19,7 @@ if ('serviceWorker' in navigator) {
 let currentYear = new Date().getFullYear()
 
 
-let endTime = new Date(`${currentYear}/10/18 00:00:00`).getTime();
+let endTime = new Date(`${currentYear}/10/18 08:45:00`).getTime();
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
 const spanMinutes = document.querySelector('span.m');
