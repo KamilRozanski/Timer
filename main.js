@@ -16,7 +16,7 @@ if ('serviceWorker' in navigator) {
 
 
 
-let currentYear = new Date().getFullYear()
+let currentYear = new Date().getFullYear() + 1
 
 
 let endTime = new Date(`${currentYear}/10/18 08:45:00`).getTime();
