@@ -17,14 +17,17 @@ if ('serviceWorker' in navigator) {
 
 
 let currentYear = new Date().getFullYear()
-let endTime = new Date(`${currentYear}/10/18 08:45:00`).getTime();
+let endTime = new Date(`${++currentYear}/10/18 07:45:00`).getTime();
 
 const spanDays = document.querySelector('span.d');
 const spanHours = document.querySelector('span.h');
 const spanMinutes = document.querySelector('span.m');
 const spanSeconds = document.querySelector('span.s');
 const mainParagraph = document.querySelector('.main__paragraph');
-let alanBirthaday = 0
+let alanBirthaday = 5
+
+
+
 
 setInterval(() => {
 
@@ -48,8 +51,8 @@ setInterval(() => {
     spanMinutes.innerHTML = minutes;
     spanSeconds.innerHTML = seconds;
 
-    alanBirthaday = (currentYear - 2019)
 
+    // console.log(Math.floor((endTime / (1000 * 60 * 60 * 24))), days)
     mainParagraph.innerHTML = `Alan's ${alanBirthaday}th  birthday will be 😍`;
 
 }, 1000)
